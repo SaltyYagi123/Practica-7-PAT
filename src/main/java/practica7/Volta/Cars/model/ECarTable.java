@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class ECarTable {
     private @Column("USER_ID") @Id Long userId;
 	private @Column("CAR_ID") Long carId;
-	private @Column("ELECTROC") Integer age;
+	private @Column("ELECTROC") int age;
 	private @Column("MODEL") String carModel;
-    private @Column("VEHICLE AGE") Integer carAge;
+    private @Column("VEHICLE AGE") int carAge;
 }

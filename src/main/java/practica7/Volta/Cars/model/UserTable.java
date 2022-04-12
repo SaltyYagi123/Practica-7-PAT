@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class UserTable {
     private @Column("USER_ID") @Id Long userId;
 	private @Column("CAR_ID") Long carId;
-	private @Column("AGE") Integer age;
+	private @Column("AGE") int age;
 	private @Column("COUNTRY") String country;
     private @Column("IDENTIFICATION") String identification;
 }
