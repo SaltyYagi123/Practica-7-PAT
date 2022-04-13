@@ -17,7 +17,7 @@ public class Charger {
     private @Column("USER_ID") @Id int userId;
 	private @Column("CHARGER_ID") int carId;
 	private @Column("CHARGER_NAME") int age;
-	private @Column("LATITUDE") String carModel;
-    private @Column("LONGITUDE") int carAge;
+	private @Column("LATITUDE") float latitude;
+    private @Column("LONGITUDE") float longitude;
     private @Column("POWER") int carPower;
 }
