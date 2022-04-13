@@ -1,6 +1,22 @@
 package practica7.Volta.Cars.service.impl;
 
-public class UserServiceImplementation {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import practica7.Volta.Cars.service.UserService;
+import practica7.Volta.Cars.repository.*;
+
+@Service
+public class UserServiceImplementation implements UserService {
+    @Autowired
+    private UsersRepository UsersRepository;
+
+    @Override
+    public List<UserDTO> getUsers()
+    {
+
+    }
+
     
 }
 
