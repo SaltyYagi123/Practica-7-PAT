@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class Vehicle {
     private @Column("USER_ID") @Id Long userId;
 	private @Column("CAR_ID") Long carId;
-	private @Column("ELECTROC") int age;
+	private @Column("ELECTRIC") boolean eletricTF;
 	private @Column("MODEL") String carModel;
     private @Column("VEHICLE AGE") int carAge;
 }
