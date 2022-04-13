@@ -1,14 +1,14 @@
 package practica7.Volta.Cars.service.impl;
 
 import practica7.Volta.Cars.model.Charger;
-import practica7.Volta.Cars.repository.ChargerRepository;
+import practica7.Volta.Cars.repository.ChargersRepository;
 import practica7.Volta.Cars.service.ChargerService;
 
 
 @Service
 public class ChargerServiceImplementation implements ChargerService {
     @Autowired
-    private ChargerRepository chargerRepository;
+    private ChargersRepository chargerRepository;
     
     @Override
     public Iterable<Charger> retrieveChargerLat(String latitude) {
