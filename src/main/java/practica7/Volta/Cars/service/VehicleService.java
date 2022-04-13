@@ -1,8 +1,11 @@
 package practica7.Volta.Cars.service;
 
-import practica7.Volta.Cars.model.Vehicle;
+import java.util.List;
 
-public class VehicleService {
+import practica7.Volta.Cars.model.Vehicle;
+import practica7.Volta.Cars.service.dto.VehicleDTO;
+
+public interface VehicleService {
 
     List<VehicleDTO> getVehicles();
 
