@@ -23,11 +23,11 @@ public interface HostsRepository extends CrudRepository<Vehicle, Long> {
     public Iterable<Host> retrieveHostByHostRating(float hostRating);
 
     @Query("SELECT * FROM HOSTS WHERE HOSTS.NUMBER_USED = :numberUsed")
-    public Iterable<Host> retrieveHostByHostRating(int numberUsed);c
+    public Iterable<Host> retrieveHostByNumberUsed(int numberUsed);
 
     @Query("SELECT * FROM HOSTS WHERE HOSTS.IDENTIFICATION = :identification")
 
-    public Iterable<Host> retrieveHostByHostRating(String identification);
+    public Iterable<Host> retrieveHostByHostIdentification(String identification);
 
 }
 
