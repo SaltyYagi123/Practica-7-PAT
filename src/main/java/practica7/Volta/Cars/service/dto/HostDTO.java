@@ -8,12 +8,13 @@ import lombok.NoArgsConstructor;
 @Data 
 @AllArgsConstructor
 @NoArgsConstructor
-public record HostDTO (
-    Long userId,
-    int carId,
-    String chargerLocation,
-    float hourlyRate,
-    float hostRating,
-    int numberUsed,
-    String identification
-){}
+public class HostDTO {
+
+    Long userId;
+    int carId;
+    String chargerLocation;
+    float hourlyRate;
+    float hostRating;
+    int numberUsed;
+    String identification;
+}

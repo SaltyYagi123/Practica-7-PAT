@@ -1,8 +1,10 @@
 package practica7.Volta.Cars.service;
 
-import practica7.Volta.Cars.model.User;
+import java.util.List;
 
-public class UserService {
+import practica7.Volta.Cars.service.dto.*;
+
+public interface UserService {
     // Aqui voy a definir mis casos base que defini en el repo, pero no son
     // necesarios incluirlos todos.
 
