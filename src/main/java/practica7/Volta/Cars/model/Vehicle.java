@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table("VEHICLES")
-public class ECar {
+public class Vehicle {
     private @Column("USER_ID") @Id Long userId;
 	private @Column("CAR_ID") Long carId;
 	private @Column("ELECTROC") int age;

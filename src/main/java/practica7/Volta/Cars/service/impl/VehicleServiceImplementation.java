@@ -1,5 +1,5 @@
 package practica7.Volta.Cars.service.impl;
 
-public class ECarServiceImplementation {
+public class VehicleServiceImplementation {
     
 }
