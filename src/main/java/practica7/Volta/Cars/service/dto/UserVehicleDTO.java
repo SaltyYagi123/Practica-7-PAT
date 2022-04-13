@@ -14,8 +14,6 @@ public class UserVehicleDTO {
     int age;
     String country; 
     String identification;
-    Long userId; 
-    Long carId; 
     boolean electric; 
     String carModel; 
     int carAge; 
