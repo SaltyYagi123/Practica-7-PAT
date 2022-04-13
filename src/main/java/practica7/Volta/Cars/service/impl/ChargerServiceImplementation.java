@@ -1,5 +1,8 @@
 package practica7.Volta.Cars.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import practica7.Volta.Cars.model.Charger;
 import practica7.Volta.Cars.repository.ChargersRepository;
 import practica7.Volta.Cars.service.ChargerService;
