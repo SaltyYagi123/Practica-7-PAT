@@ -5,7 +5,7 @@ import practica7.Volta.Cars.service.dto.VehicleDTO;
 
 public interface VehicleService {
 
-    List<VehicleDTO> retrieveVehicles(void);
+    List<VehicleDTO> retrieveVehicles();
 
     List<VehicleDTO> retrieveVehiclesElectric(boolean electric);
 }

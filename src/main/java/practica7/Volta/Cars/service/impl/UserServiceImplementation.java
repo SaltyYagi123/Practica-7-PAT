@@ -1,34 +1,36 @@
 package practica7.Volta.Cars.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import practica7.Volta.Cars.service.UserService;
+import practica7.Volta.Cars.service.dto.UserDTO;
+import practica7.Volta.Cars.service.dto.UserVehicleDTO;
 import practica7.Volta.Cars.repository.*;
 
 @Service
 public class UserServiceImplementation implements UserService {
-        @Autowired
+    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Autowired
     private UsersRepository userRepository;
 
     @Override
-    public List<UserDTO> getUsers()
-    {
+    public List<UserDTO> getUsers() {
         return StreamSupport.stream(userRepository.findAll().spliterator(), false)
                 .map(obj -> new UserDTO(
-                    obj.getUserId(),
-                    obj.getCarId(), 
-                    obj.getAge(), 
-                    obj.getCountry(), 
-                    obj.getIdentification()
-                ))
+                        obj.getUserId(),
+                        obj.getCarId(),
+                        obj.getAge(),
+                        obj.getCountry(),
+                        obj.getIdentification()))
                 .toList();
     }
 
-    //Inner-Join
+    // Inner-Join
     @Override 
     public List<UserVehicleDTO> getUsersWithVehicles(){
         
@@ -81,17 +83,36 @@ public class UserServiceImplementation implements UserService {
         return userList;
     }
 
-    
+    @Override
+    public List<UserDTO> getUsers() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public List<UserVehicleDTO> getUsersWithVehicles() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public List<UserVehicleDTO> getAllUsersAllVehicles() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 }
 
-/*    // Aqui voy a definir mis casos base que defini en el repo, pero no son
-    // necesarios incluirlos todos.
-
-    //All data from HostTable 
-    List<UserDTO> getUsers();
-
-    //Inner-Join
-    List<UserVehicleDTO> getUsersWithVehicles();
-
-    //Full Outer Join
-    List <UserVehicleDTO> getAllUsersAllVehicles();*/
+/*
+ * // Aqui voy a definir mis casos base que defini en el repo, pero no son
+ * // necesarios incluirlos todos.
+ * 
+ * //All data from HostTable
+ * List<UserDTO> getUsers();
+ * 
+ * //Inner-Join
+ * List<UserVehicleDTO> getUsersWithVehicles();
+ * 
+ * //Full Outer Join
+ * List <UserVehicleDTO> getAllUsersAllVehicles();
+ */
