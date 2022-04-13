@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class VehicleDTO {
     Long userId;
     Long carId;
-    int age;
+    boolean electric;
     String carModel;
     int carAge;
 }

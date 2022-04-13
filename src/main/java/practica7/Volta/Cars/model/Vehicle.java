@@ -17,5 +17,5 @@ public class Vehicle {
 	private @Column("CAR_ID") Long carId;
 	private @Column("ELECTRIC") boolean eletricTF;
 	private @Column("MODEL") String carModel;
-    private @Column("VEHICLE AGE") int carAge;
+    private @Column("VEHICLE_AGE") int carAge;
 }

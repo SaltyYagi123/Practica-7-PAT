@@ -16,7 +16,6 @@ public class HostChargerDTO {
     float hostRating;
     int numberUsed;
     String identification;
-    int age; 
     float lat;
     float lon;
     int carPower;
