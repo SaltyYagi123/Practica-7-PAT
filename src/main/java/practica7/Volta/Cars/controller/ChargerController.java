@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,16 +27,6 @@ public class ChargerController {
         Iterable<Charger> response = chargerService.retrieveChargerLong(longitude);
         return ResponseEntity.ok().body(response);
     }
-    /*@GetMapping("/charger")
-    public ResponseEntity<Iterable<Charger>> retrieveChargerLat(@RequestParam(required=false) String latitude) {
-        Iterable<Charger> response = chargerService.retrieveChargerLat(latitude);
-        return ResponseEntity.ok().body(response);
-    }
-    @PostMapping("/chargers")
-    public ResponseEntity<Charger> createCharger(@RequestBody Charger charger) {
-        Charger newCharger = chargerService.createCharger(charger);
-        return ResponseEntity.ok().body(newCharger);
-    }*/
 
     @GetMapping("/charger/{id}/")
     public ResponseEntity<Charger> retrieveCharger(@PathVariable String id) {
@@ -64,3 +53,15 @@ public class ChargerController {
 
 // /charger/ (Crear, Coger)
 // /chargers/{id} (Coger un elemento, actualizar, eleminar)
+
+
+    /*@GetMapping("/charger")
+    public ResponseEntity<Iterable<Charger>> retrieveChargerLat(@RequestParam(required=false) String latitude) {
+        Iterable<Charger> response = chargerService.retrieveChargerLat(latitude);
+        return ResponseEntity.ok().body(response);
+    }
+    @PostMapping("/chargers")
+    public ResponseEntity<Charger> createCharger(@RequestBody Charger charger) {
+        Charger newCharger = chargerService.createCharger(charger);
+        return ResponseEntity.ok().body(newCharger);
+    }*/
