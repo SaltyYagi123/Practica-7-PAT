@@ -11,13 +11,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table("HOSTS")
-public class HostTable {
+@Table("USERS")
+public class User {
     private @Column("USER_ID") @Id Long userId;
-    private @Column("CAR_ID") int carId;
-    private @Column("CHARGER_LOCATION") String chargerLocation;
-    private @Column("HOURLY_RATE") float hourlyRate;
-    private @Column("RATING") float hostRating;
-    private @Column("NUMBER_USED") int numberUsed;
+	private @Column("CAR_ID") Long carId;
+	private @Column("AGE") int age;
+	private @Column("COUNTRY") String country;
     private @Column("IDENTIFICATION") String identification;
 }

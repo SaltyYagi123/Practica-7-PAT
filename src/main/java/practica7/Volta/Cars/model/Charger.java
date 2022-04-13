@@ -4,18 +4,19 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table("VEHICLES")
-public class ECarTable {
+@Table("CHARGERS")
+public class Charger {
     private @Column("USER_ID") @Id Long userId;
-	private @Column("CAR_ID") Long carId;
-	private @Column("ELECTROC") int age;
-	private @Column("MODEL") String carModel;
-    private @Column("VEHICLE AGE") int carAge;
+	private @Column("CHARGER_ID") Long carId;
+	private @Column("CHARGER_NAME") int age;
+	private @Column("LATITUDE") String carModel;
+    private @Column("LONGITUDE") int carAge;
+    private @Column("POWER") int carPower;
 }
