@@ -7,12 +7,22 @@ import practica7.Volta.Cars.model.Charger;
 import practica7.Volta.Cars.repository.ChargersRepository;
 import practica7.Volta.Cars.service.ChargerService;
 
+/*  Iterable<Charger> retrieveChargerLat(String latitude);
+
+    Iterable<Charger> retrieveChargerLong(String longitude);
+
+    Charger retrieveCharger(String id);
+
+    Charger updateCharger(String id, Charger charger);
+
+    void deleteCharger(String id);
+*/
 
 @Service
 public class ChargerServiceImplementation implements ChargerService {
     @Autowired
     private ChargersRepository chargerRepository;
-    
+
     @Override
     public Iterable<Charger> retrieveChargerLat(String latitude) {
         if (latitude == null) {
@@ -33,12 +43,11 @@ public class ChargerServiceImplementation implements ChargerService {
         }
     }
 
-
     @Override
     public Charger retrieveCharger(String id) {
         Charger response = null;
         if (chargerRepository.existsById(id)) {
-            Iterable<Charger> chargers =chargerRepository.retrieveCharger(id);
+            Iterable<Charger> chargers = chargerRepository.retrieveCharger(id);
             for (Charger charger : chargers) {
                 response = charger;
             }
