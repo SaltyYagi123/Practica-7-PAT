@@ -7,7 +7,6 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 
 @Data
 @AllArgsConstructor
