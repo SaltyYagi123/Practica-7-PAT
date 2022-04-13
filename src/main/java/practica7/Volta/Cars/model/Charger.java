@@ -7,14 +7,15 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table("CHARGERS")
 public class Charger {
-    private @Column("USER_ID") @Id Long userId;
-	private @Column("CHARGER_ID") Long carId;
+    private @Column("USER_ID") @Id int userId;
+	private @Column("CHARGER_ID") int carId;
 	private @Column("CHARGER_NAME") int age;
 	private @Column("LATITUDE") String carModel;
     private @Column("LONGITUDE") int carAge;
